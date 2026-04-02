@@ -1,4 +1,4 @@
-import type { NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { NotFoundError } from "../lib/errors.js";
 
 export function notFoundHandler(
@@ -6,5 +6,5 @@ export function notFoundHandler(
   _res: Response,
   next: NextFunction
 ) {
-  next(new NotFoundError("Routes not found"));
+  next(new NotFoundError("Route not found"));
 }

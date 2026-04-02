@@ -20,9 +20,8 @@ export const errorHandler: ErrorRequestHandler = (err, req, res, _next) => {
       message: issue.message,
     }));
   }
-  logger.error(
-    `${req.method} ${req.originalUrl}  ----> ${status} -- ${message}`
-  );
+
+  logger.error(`${req.method} ${req.originalUrl} ----> ${status}-${message}`);
 
   res.status(status).json({
     error: {
