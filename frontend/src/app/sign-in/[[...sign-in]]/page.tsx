@@ -1,7 +1,7 @@
 import { SignIn } from "@clerk/nextjs";
 import Link from "next/link";
 
-const SignInPage = () => {
+export default function SignInPage() {
   return (
     <main className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4">
       <div className="w-full max-w-md space-y-8">
@@ -19,10 +19,10 @@ const SignInPage = () => {
           />
         </div>
         <p className="text-center text-xs text-muted-foreground">
-          Create an account?{" "}
+          New here?
           <Link
-            href={"/sign-up"}
             className="font-medium text-primary hover:text-primary/90"
+            href={"/sign-up"}
           >
             Sign Up
           </Link>
@@ -30,6 +30,4 @@ const SignInPage = () => {
       </div>
     </main>
   );
-};
-
-export default SignInPage;
+}

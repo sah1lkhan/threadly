@@ -1,7 +1,9 @@
-export default function Home() {
+import ThreadsHomePage from "@/components/threads/threads-home";
+
+export default function ThreadsPage() {
   return (
-    <div>
-      <p className="text-teal-700">homepage</p>
+    <div className="flex w-full   flex-1 flex-col">
+      <ThreadsHomePage />
     </div>
   );
 }
